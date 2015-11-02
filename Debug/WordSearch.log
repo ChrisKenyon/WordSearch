@@ -1,0 +1,42 @@
+﻿Build started 10/19/2015 7:02:37 PM.
+     1>Project "C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\WordSearch\WordSearch.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\WordSearch.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt WordList.cpp
+         WordList.cpp
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(12): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(106): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(107): warning C4018: '>': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(199): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(236): warning C4018: '>=': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(249): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\hashtable.cpp(78): warning C4018: '>': signed/unsigned mismatch
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\hashtable.cpp(74): note: while compiling class template member function 'int Hashtable<std::string>::findMaxCollisions(void)'
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(18): note: see reference to function template instantiation 'int Hashtable<std::string>::findMaxCollisions(void)' being compiled
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.h(27): note: see reference to class template instantiation 'Hashtable<std::string>' being compiled
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\heap.cpp(19): warning C4018: '<': signed/unsigned mismatch
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\heap.cpp(18): note: while compiling class template member function 'void Heap<std::string>::InitializeMaxHeap(std::vector<std::string,std::allocator<_Ty>> &)'
+                 with
+                 [
+                     _Ty=std::string
+                 ]
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(39): note: see reference to function template instantiation 'void Heap<std::string>::InitializeMaxHeap(std::vector<std::string,std::allocator<_Ty>> &)' being compiled
+                 with
+                 [
+                     _Ty=std::string
+                 ]
+         c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(38): note: see reference to class template instantiation 'Heap<std::string>' being compiled
+     1>c:\users\chris\dropbox\documents\school\engineering algorithms\wordsearch\wordsearch\wordlist.cpp(102): warning C4715: 'WordList::getLargestWordLength': not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\Debug\WordSearch.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\Debug\WordSearch.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\Debug\WordSearch.lib" /MACHINE:X86 Debug\Grid.obj
+         Debug\Hashtable.obj
+         Debug\heap.obj
+         Debug\stdafx.obj
+         Debug\WordList.obj
+         Debug\main.obj
+         Debug\WordSearch.obj
+         WordSearch.vcxproj -> C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\Debug\WordSearch.exe
+     1>Done Building Project "C:\Users\Chris\Dropbox\Documents\School\Engineering Algorithms\WordSearch\WordSearch\WordSearch.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.61

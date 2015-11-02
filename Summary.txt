@@ -1,0 +1,24 @@
+Chris Kenyon
+
+The output files are all in my project folder at /WordSearch/WordSearch/Outputs/Output-*.txt. For running the code, you shouldn't need to change any hard-coded file strings if you run from the VS project on a Windows machine.
+
+Please note in my project that my algorithm uses the original definition for diagonal lookups in the grid, so my words found will be different (as they were for project 3A).
+
+Sorts:
+
+We can see from these results that quick sort is clearly the fastest, followed by heapsort, and then merge sort. These have similar time complexities so this makes sense that these are all relatively close compared to the insertion sort. Merge sort will take longer than heap and quick because it needs to allocate more memory and has more instructions, and accessing memory is slow. Heapsort needs to put the data into a data structure before sorting which takes time. Insertion sort is significantly slower and not an effective solution for a list of this size.
+
+Quicksort: ~3.5seconds
+Heapsort: ~9 seconds
+Mergesort: ~19seconds
+Insertion sort: > 1 hr
+
+Searches:
+
+There are a few complexities to consider with my implementation of the searches. My original binary search returns either the word being looked up, or the next highest word, and then checks if the lookup could be a prefix to the next word. This allows us to eliminate a large portion of the searches, resulting in a very fast algorithm compared to the brute force. Thus, when replacing with a hash table, although our lookups enter constant time complexity, it is still taking longer without this optimization. Compare 1.426 seconds on the binary with optimization and 13.413 seconds for the hash table without optimization for the 50x50, and 5.391 seconds vs. 55.274 seconds for the 100x100. I only let it run to 500x500 for the hash table without optimization because it was slow and annoying, you'll find that I did much more anyway.
+
+An attempted optimization on the hash table lookups was to only hash the first 5 characters of the words, then look for words that the lookup could be a prefix to in the collision vector. This proved to have a better performance, but still not quite the level of the binary search, as the worst case lookup is O(n) with a bad hash spread, which reaches up to 700 collisions for words with prefixes like "inter" (See findMaxCollisions). Compare 1.426 seconds on the binary with optimization and 1.519 seconds for the hash table without optimization for the 50x50, and 5.391 seconds vs. 6.053 seconds for 100x100. The code for this is commented out in the project, but readily testable if you care to see it.
+
+I also tested by using the hash table lookup for a match, and if it doesn't find a match it goes to the binary search. This proved to be comparable speed to my other hash table optimization. It ran on average faster than the other optimization, but not as fast as the regular prefix check as it needs to do an extra step in checking whether it is a word or not (albeit a constant check, but that becomes more significant considering it is run so many times). All of these can be seen in the output files in the project.
+
+I didn't test the binary search with the full 5-22 character lookups because it would change my framework too much. This would be the slowest implementation because of its logn complexity vs. hash's constant, and obviously slower than the prefix check implementation. 
